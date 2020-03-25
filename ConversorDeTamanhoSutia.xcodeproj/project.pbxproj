@@ -16,6 +16,8 @@
 		C7D171F624070F8E00E84E85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D171F424070F8E00E84E85 /* LaunchScreen.storyboard */; };
 		C7D1720124070F8E00E84E85 /* ConversorDeTamanhoSutiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1720024070F8E00E84E85 /* ConversorDeTamanhoSutiaTests.swift */; };
 		C7D1720C24070F8E00E84E85 /* ConversorDeTamanhoSutiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1720B24070F8E00E84E85 /* ConversorDeTamanhoSutiaUITests.swift */; };
+		C7E74FA124291B7A00682392 /* SelecionarMedidaOrigemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E74FA024291B7A00682392 /* SelecionarMedidaOrigemViewController.swift */; };
+		C7E74FA424296BDD00682392 /* PadraoMedida.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E74FA324296BDD00682392 /* PadraoMedida.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C7D1720724070F8E00E84E85 /* ConversorDeTamanhoSutiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConversorDeTamanhoSutiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D1720B24070F8E00E84E85 /* ConversorDeTamanhoSutiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversorDeTamanhoSutiaUITests.swift; sourceTree = "<group>"; };
 		C7D1720D24070F8E00E84E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7E74FA024291B7A00682392 /* SelecionarMedidaOrigemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecionarMedidaOrigemViewController.swift; sourceTree = "<group>"; };
+		C7E74FA324296BDD00682392 /* PadraoMedida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadraoMedida.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +105,14 @@
 		C7D171E824070F8D00E84E85 /* ConversorDeTamanhoSutia */ = {
 			isa = PBXGroup;
 			children = (
+				C7E74FA224296B8200682392 /* Models */,
+				C7E74F9F2428F38600682392 /* ViewControllers */,
 				C7D171E924070F8D00E84E85 /* AppDelegate.swift */,
 				C7D171EB24070F8D00E84E85 /* SceneDelegate.swift */,
-				C7D171ED24070F8D00E84E85 /* AbaMedidasViewController.swift */,
 				C7D171EF24070F8D00E84E85 /* Main.storyboard */,
 				C7D171F224070F8E00E84E85 /* Assets.xcassets */,
 				C7D171F424070F8E00E84E85 /* LaunchScreen.storyboard */,
 				C7D171F724070F8E00E84E85 /* Info.plist */,
-				C7859CA32428144100411B7C /* AbaConversoesViewController.swift */,
 			);
 			path = ConversorDeTamanhoSutia;
 			sourceTree = "<group>";
@@ -129,6 +133,24 @@
 				C7D1720D24070F8E00E84E85 /* Info.plist */,
 			);
 			path = ConversorDeTamanhoSutiaUITests;
+			sourceTree = "<group>";
+		};
+		C7E74F9F2428F38600682392 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7D171ED24070F8D00E84E85 /* AbaMedidasViewController.swift */,
+				C7859CA32428144100411B7C /* AbaConversoesViewController.swift */,
+				C7E74FA024291B7A00682392 /* SelecionarMedidaOrigemViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C7E74FA224296B8200682392 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7E74FA324296BDD00682392 /* PadraoMedida.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E74FA124291B7A00682392 /* SelecionarMedidaOrigemViewController.swift in Sources */,
 				C7D171EE24070F8D00E84E85 /* AbaMedidasViewController.swift in Sources */,
 				C7D171EA24070F8D00E84E85 /* AppDelegate.swift in Sources */,
 				C7859CA42428144100411B7C /* AbaConversoesViewController.swift in Sources */,
+				C7E74FA424296BDD00682392 /* PadraoMedida.swift in Sources */,
 				C7D171EC24070F8D00E84E85 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
