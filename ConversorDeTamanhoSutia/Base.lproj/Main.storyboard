@@ -188,6 +188,9 @@
                                 <state key="normal" title="Converter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Converter:" destination="ZXd-VN-P2k" eventType="touchUpInside" id="LPx-DV-iPV"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medida embaixo do busto (em cm)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QV5-gY-vD6" userLabel="textFieldMedidaEmbaixo">
                                 <rect key="frame" x="83" y="497" width="249" height="34"/>
@@ -222,11 +225,12 @@
                     <tabBarItem key="tabBarItem" title="Medidas" image="pin" catalog="system" id="iab-0x-3fk" userLabel="tabItemMedidasCorpo"/>
                     <connections>
                         <outlet property="buttonConverter" destination="f0C-cr-t1x" id="vUA-BA-3OC"/>
+                        <outlet property="segmentedControlUnidadesMedida" destination="ebG-x3-UHl" id="fkr-jt-bQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrm-0c-a7Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624.63768115942037" y="-154.01785714285714"/>
+            <point key="canvasLocation" x="-743" y="-155"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pdH-MZ-RDe">

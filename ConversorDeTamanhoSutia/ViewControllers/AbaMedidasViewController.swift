@@ -12,6 +12,7 @@ class AbaMedidasViewController: UIViewController {
 
     
     @IBOutlet weak var buttonConverter: UIButton!
+    @IBOutlet weak var segmentedControlUnidadesMedida: UISegmentedControl!
     
     override func viewWillAppear(_ animated: Bool) {
         buttonConverter.layer.cornerRadius = 10
@@ -23,6 +24,10 @@ class AbaMedidasViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func Converter(_ sender: Any) {
+        
+        
+    }
+    
 }
 
