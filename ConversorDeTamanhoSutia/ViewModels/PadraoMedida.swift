@@ -12,11 +12,9 @@ class PadraoMedida {
     
     var id:Int?
     var descricao:String?
-    var medida:Int?
     
-    init(id: Int?, descricao: String?, medida: Int?) {
+    init(id: Int?, descricao: String?) {
         self.id = id
         self.descricao = descricao
-        self.medida = medida
     }
 }

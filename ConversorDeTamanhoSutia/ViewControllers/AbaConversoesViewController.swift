@@ -20,10 +20,10 @@ class AbaConversoesViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        origens.append(PadraoMedida(id: 1, descricao: "US / UK", medida: nil))
-        origens.append(PadraoMedida(id: 2, descricao: "EU", medida: nil))
-        origens.append(PadraoMedida(id: 3, descricao: "FR", medida: nil))
-        origens.append(PadraoMedida(id: 4, descricao: "BR", medida: nil))
+        origens.append(PadraoMedida(id: 1, descricao: "EU"))
+        origens.append(PadraoMedida(id: 2, descricao: "FR"))
+        origens.append(PadraoMedida(id: 3, descricao: "UK"))
+        origens.append(PadraoMedida(id: 4, descricao: "US"))
         
         tableViewMedidasOrigem.delegate = self
         tableViewMedidasOrigem.dataSource = self
@@ -53,7 +53,6 @@ class AbaConversoesViewController: UIViewController, UITableViewDelegate, UITabl
         let origem = origens[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier:cellOrigemIdentifier, for: indexPath)
-        
         cell.textLabel?.text = origem.descricao
         
         return cell
@@ -63,10 +62,9 @@ class AbaConversoesViewController: UIViewController, UITableViewDelegate, UITabl
 
         if segue.identifier == segueSelecionarMedidaOrigemIdentifier  {
 
-            if let navController = segue.destination as? UINavigationController {
-
-                if let nextViewController = navController.topViewController as? SelecionarMedidaOrigemViewController {
-                    nextViewController
+            if let nextViewController = segue.destination as? SelecionarMedidaOrigemViewController {
+                if let indexPath = tableViewMedidasOrigem.indexPathForSelectedRow {
+                    nextViewController.padraoDeMedidaSelecionado = origens[indexPath.row]
                 }
             }
         }

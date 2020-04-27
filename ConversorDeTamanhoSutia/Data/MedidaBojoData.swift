@@ -14,18 +14,18 @@ class MedidaBojoData {
     
     init() {
         self._medidasBojo = [MedidaBojoModel]()
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 0, tamanhoFinal: 11, medidaFR: "AA", medidaUE: "AA", medidaUS: "AA", medidaUK: "AA"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 12, tamanhoFinal: 13, medidaFR: "A", medidaUE: "A", medidaUS: "A", medidaUK: "A"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 14, tamanhoFinal: 15, medidaFR: "B", medidaUE: "B", medidaUS: "B", medidaUK: "B"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 16, tamanhoFinal: 17, medidaFR: "C", medidaUE: "C", medidaUS: "C", medidaUK: "C"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 18, tamanhoFinal: 19, medidaFR: "D", medidaUE: "D", medidaUS: "D", medidaUK: "D"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 20, tamanhoFinal: 21, medidaFR: "E", medidaUE: "E", medidaUS: "DD", medidaUK: "DD"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 22, tamanhoFinal: 23, medidaFR: "F", medidaUE: "F", medidaUS: "DDD/F", medidaUK: "E"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 24, tamanhoFinal: 25, medidaFR: "G", medidaUE: "G", medidaUS: "G", medidaUK: "F"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 26, tamanhoFinal: 27, medidaFR: "H", medidaUE: "H", medidaUS: "H", medidaUK: "FF"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 28, tamanhoFinal: 29, medidaFR: "J", medidaUE: "J", medidaUS: "I", medidaUK: "G"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 30, tamanhoFinal: 31, medidaFR: "K", medidaUE: "K", medidaUS: "J", medidaUK: "GG"))
-        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 32, tamanhoFinal: 33, medidaFR: "L", medidaUE: "L", medidaUS: "K", medidaUK: "H"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 0, tamanhoFinal: 11, medidaFR: "AA", medidaEU: "AA", medidaUS: "AA", medidaUK: "AA"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 12, tamanhoFinal: 13, medidaFR: "A", medidaEU: "A", medidaUS: "A", medidaUK: "A"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 14, tamanhoFinal: 15, medidaFR: "B", medidaEU: "B", medidaUS: "B", medidaUK: "B"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 16, tamanhoFinal: 17, medidaFR: "C", medidaEU: "C", medidaUS: "C", medidaUK: "C"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 18, tamanhoFinal: 19, medidaFR: "D", medidaEU: "D", medidaUS: "D", medidaUK: "D"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 20, tamanhoFinal: 21, medidaFR: "E", medidaEU: "E", medidaUS: "DD", medidaUK: "DD"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 22, tamanhoFinal: 23, medidaFR: "F", medidaEU: "F", medidaUS: "DDD/F", medidaUK: "E"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 24, tamanhoFinal: 25, medidaFR: "G", medidaEU: "G", medidaUS: "G", medidaUK: "F"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 26, tamanhoFinal: 27, medidaFR: "H", medidaEU: "H", medidaUS: "H", medidaUK: "FF"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 28, tamanhoFinal: 29, medidaFR: "J", medidaEU: "J", medidaUS: "I", medidaUK: "G"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 30, tamanhoFinal: 31, medidaFR: "K", medidaEU: "K", medidaUS: "J", medidaUK: "GG"))
+        self._medidasBojo.append(MedidaBojoModel(tamanhoInicial: 32, tamanhoFinal: 33, medidaFR: "L", medidaEU: "L", medidaUS: "K", medidaUK: "H"))
 
     }
     
@@ -52,7 +52,7 @@ class MedidaBojoData {
     }
     
     func GetByMedidaUE(medida:String) -> MedidaBojoModel? {
-        let filtrados = _medidasBojo.filter { $0.medidaUE! == medida }
+        let filtrados = _medidasBojo.filter { $0.medidaEU! == medida }
         if(filtrados.count > 0) {
             return filtrados[0]
         } else {

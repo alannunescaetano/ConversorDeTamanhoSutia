@@ -13,15 +13,15 @@ class MedidaBojoModel {
     var tamanhoInicial:Int?
     var tamanhoFinal:Int?
     var medidaFR:String?
-    var medidaUE:String?
+    var medidaEU:String?
     var medidaUK:String?
     var medidaUS:String?
     
-    init(tamanhoInicial:Int?, tamanhoFinal:Int?, medidaFR:String?, medidaUE:String?, medidaUS:String?, medidaUK:String?) {
+    init(tamanhoInicial:Int?, tamanhoFinal:Int?, medidaFR:String?, medidaEU:String?, medidaUS:String?, medidaUK:String?) {
         self.tamanhoInicial = tamanhoInicial
         self.tamanhoFinal = tamanhoFinal
         self.medidaFR = medidaFR
-        self.medidaUE = medidaUE
+        self.medidaEU = medidaEU
         self.medidaUS = medidaUS
         self.medidaUK = medidaUK
     }

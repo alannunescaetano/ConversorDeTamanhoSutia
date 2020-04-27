@@ -13,14 +13,14 @@ class MedidaCostasModel {
     var tamanhoInicial:Int?
     var tamanhoFinal:Int?
     var medidaFR:String?
-    var medidaUE:String?
+    var medidaEU:String?
     var medidaUSUK:String?
     
-    init(tamanhoInicial:Int?, tamanhoFinal:Int?, medidaFR:String?, medidaUE:String?, medidaUSUK:String?) {
+    init(tamanhoInicial:Int?, tamanhoFinal:Int?, medidaFR:String?, medidaEU:String?, medidaUSUK:String?) {
         self.tamanhoInicial = tamanhoInicial
         self.tamanhoFinal = tamanhoFinal
         self.medidaFR = medidaFR
-        self.medidaUE = medidaUE
+        self.medidaEU = medidaEU
         self.medidaUSUK = medidaUSUK
     }
 }

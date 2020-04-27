@@ -10,8 +10,8 @@ import Foundation
 
 class ConversorMedidasSutia {
     
-    private var _medidaCostasData : MedidaCostasData?
-    var medidaCostasData : MedidaCostasData {
+    private static var _medidaCostasData : MedidaCostasData?
+    static var medidaCostasData : MedidaCostasData {
         get{
             if(_medidaCostasData == nil) {
                 _medidaCostasData = MedidaCostasData()
@@ -21,14 +21,14 @@ class ConversorMedidasSutia {
         }
     }
     
-    private var _medidaCostasData : MedidaCostasData?
-    var medidaCostasData : MedidaCostasData {
+    private static var _medidaBojoData : MedidaBojoData?
+    static var medidaBojoData : MedidaBojoData {
         get{
-            if(_medidaCostasData == nil) {
-                _medidaCostasData = MedidaCostasData()
+            if(_medidaBojoData == nil) {
+                _medidaBojoData = MedidaBojoData()
             }
         
-            return _medidaCostasData!;
+            return _medidaBojoData!;
         }
     }
     
@@ -37,24 +37,66 @@ class ConversorMedidasSutia {
         let medidaBustoEmCm = tamanhoBusto
         let medidaEmbaixoDoBustoEmCm = tamanhoEmbaixoDoBusto
         
-        
-        
-        
-        
         let medidaBustoEmIn = ConversorUnidadesMedida.converterCmParaPolegadas(cm: tamanhoBusto!)
         let medidaEmbaixoDoBustoEmIn = ConversorUnidadesMedida.converterCmParaPolegadas(cm: tamanhoEmbaixoDoBusto!)
         
-        var medidaBR:String?
-        var medidaFR:String?
-        var medidaEU:String?
-        var medidaUS:String?
-        var medidaUK:String?
+        let medidaCostasTamanho = medidaCostasData.GetByTamanho(tamanhoEmCm: tamanhoEmbaixoDoBusto!)
+        let medidaBojoTamanho = medidaBojoData.GetByTamanho(tamanhoEmCm: tamanhoBusto!)
         
-        var conjuntoMedidas = ConjuntoMedidas(medidaBustoEmCm: medidaBustoEmCm, medidaBustoEmIn: medidaBustoEmIn, medidaEmbaixoDoBustoEmCm: medidaEmbaixoDoBustoEmCm, medidaEmbaixoDoBustoEmIn: medidaEmbaixoDoBustoEmIn, medidaBR: medidaBR, medidaFR: medidaFR, medidaEU: medidaEU, medidaUS: medidaUS, medidaUK: medidaUK)
+        let conjuntoMedidas = criarConjuntoDeMedidas(medidaBustoEmCm: medidaBustoEmCm, medidaBustoEmIn: medidaBustoEmIn, medidaEmbaixoDoBustoEmCm: medidaEmbaixoDoBustoEmCm, medidaEmbaixoDoBustoEmIn: medidaEmbaixoDoBustoEmIn, medidaCostasTamanho: medidaCostasTamanho, medidaBojoTamanho:medidaBojoTamanho)
         
         return conjuntoMedidas
     }
     
-    private static func
+    static func converterMedidaFR(medidaCostasFR:String?, medidaBojoFR:String?) -> ConjuntoMedidas {
+        
+        let medidaCostasTamanho = medidaCostasData.GetByMedidaFR(medida: medidaCostasFR!)
+        let medidaBojoTamanho = medidaBojoData.GetByMedidaFR(medida: medidaCostasFR!)
+        
+        let conjuntoMedidas = criarConjuntoDeMedidas(medidaBustoEmCm: nil, medidaBustoEmIn: nil, medidaEmbaixoDoBustoEmCm: nil, medidaEmbaixoDoBustoEmIn: nil, medidaCostasTamanho: medidaCostasTamanho, medidaBojoTamanho:medidaBojoTamanho)
+        
+        return conjuntoMedidas
+    }
+    
+    static func converterMedidaUE(medidaCostasEU:String?, medidaBojoEU:String?) -> ConjuntoMedidas {
+        
+        let medidaCostasTamanho = medidaCostasData.GetByMedidaEU(medida: medidaCostasEU!)
+        let medidaBojoTamanho = medidaBojoData.GetByMedidaUE(medida: medidaBojoEU!)
+        
+        let conjuntoMedidas = criarConjuntoDeMedidas(medidaBustoEmCm: nil, medidaBustoEmIn: nil, medidaEmbaixoDoBustoEmCm: nil, medidaEmbaixoDoBustoEmIn: nil, medidaCostasTamanho: medidaCostasTamanho, medidaBojoTamanho:medidaBojoTamanho)
+        
+        return conjuntoMedidas
+    }
+    
+    static func converterMedidaUK(medidaCostasUK:String?, medidaBojoUK:String?) -> ConjuntoMedidas {
+        
+        let medidaCostasTamanho = medidaCostasData.GetByMedidaUSUK(medida: medidaCostasUK!)
+        let medidaBojoTamanho = medidaBojoData.GetByMedidaUK(medida: medidaBojoUK!)
+        
+        let conjuntoMedidas = criarConjuntoDeMedidas(medidaBustoEmCm: nil, medidaBustoEmIn: nil, medidaEmbaixoDoBustoEmCm: nil, medidaEmbaixoDoBustoEmIn: nil, medidaCostasTamanho: medidaCostasTamanho, medidaBojoTamanho:medidaBojoTamanho)
+        
+        return conjuntoMedidas
+    }
+    
+    static func converterMedidaUS(medidaCostasUS:String?, medidaBojoUS:String?) -> ConjuntoMedidas {
+        
+        let medidaCostasTamanho = medidaCostasData.GetByMedidaUSUK(medida: medidaCostasUS!)
+        let medidaBojoTamanho = medidaBojoData.GetByMedidaUS(medida: medidaBojoUS!)
+        
+        let conjuntoMedidas = criarConjuntoDeMedidas(medidaBustoEmCm: nil, medidaBustoEmIn: nil, medidaEmbaixoDoBustoEmCm: nil, medidaEmbaixoDoBustoEmIn: nil, medidaCostasTamanho: medidaCostasTamanho, medidaBojoTamanho:medidaBojoTamanho)
+        
+        return conjuntoMedidas
+    }
+    
+    private static func criarConjuntoDeMedidas(medidaBustoEmCm:Int?, medidaBustoEmIn:Int?, medidaEmbaixoDoBustoEmCm:Int?, medidaEmbaixoDoBustoEmIn:Int?, medidaCostasTamanho:MedidaCostasModel?, medidaBojoTamanho:MedidaBojoModel?) -> ConjuntoMedidas {
+        let medidaBR:String = "-"
+        let medidaFR:String = "\(medidaCostasTamanho!.medidaFR!)\(medidaBojoTamanho!.medidaFR!)"
+        let medidaEU:String = "\(medidaCostasTamanho!.medidaEU!)\(medidaBojoTamanho!.medidaEU!)"
+        let medidaUS:String = "\(medidaCostasTamanho!.medidaUSUK!)\(medidaBojoTamanho!.medidaUS!)"
+        let medidaUK:String = "\(medidaCostasTamanho!.medidaUSUK!)\(medidaBojoTamanho!.medidaUK!)"
+    
+        return ConjuntoMedidas(medidaBustoEmCm: medidaBustoEmCm, medidaBustoEmIn: medidaBustoEmIn, medidaEmbaixoDoBustoEmCm: medidaEmbaixoDoBustoEmCm, medidaEmbaixoDoBustoEmIn: medidaEmbaixoDoBustoEmIn, medidaBR: medidaBR, medidaFR: medidaFR, medidaEU: medidaEU, medidaUS: medidaUS, medidaUK: medidaUK)
+    
+    }
     
 }
