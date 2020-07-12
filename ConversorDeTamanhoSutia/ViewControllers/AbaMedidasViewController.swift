@@ -10,9 +10,15 @@ import UIKit
 
 class AbaMedidasViewController: UIViewController {
 
+    private let segmentedControlUnidadesMedidaÍndiceCentimetros = 0
+    private let segmentedControlUnidadesMedidaÍndicePolegadas = 1
+    
+    private let segueResultadoIdentifier = "segueResulado"
     
     @IBOutlet weak var buttonConverter: UIButton!
     @IBOutlet weak var segmentedControlUnidadesMedida: UISegmentedControl!
+    @IBOutlet weak var textFieldMedidaBusto: UITextField!
+    @IBOutlet weak var textFieldMedidaEmbaixoBusto: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         buttonConverter.layer.cornerRadius = 10
@@ -21,13 +27,45 @@ class AbaMedidasViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func Converter(_ sender: Any) {
-        
-        
+        configurarTeclado()
+        configurarTelaPelaUnidadeDeMedida()
     }
     
+    private func configurarTeclado() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
+
+    @IBAction func alterarUnidadeDeMedida(_ sender: Any) {
+        configurarTelaPelaUnidadeDeMedida()
+    }
+    
+    private func converterMedidas() -> ConjuntoMedidas? {
+        guard let medidaBusto = Int(textFieldMedidaBusto.text ?? ""), let medidaEmbaixoBusto = Int(textFieldMedidaEmbaixoBusto.text ?? "") else {
+            //Criar um tratamento de erro
+            return nil
+        }
+        
+        return ConversorMedidasSutia.converterMedidasCorporaisPara(tamanhoBusto: medidaBusto, tamanhoEmbaixoDoBusto: medidaEmbaixoBusto)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueResultadoIdentifier, let nextViewController = segue.destination as? ResultadoViewController {
+            nextViewController.conjuntoMedidas = converterMedidas()
+        }
+    }
+    
+    private func configurarTelaPelaUnidadeDeMedida() {
+        switch segmentedControlUnidadesMedida.selectedSegmentIndex {
+        case segmentedControlUnidadesMedidaÍndiceCentimetros:
+            textFieldMedidaBusto.placeholder = "Medida do busto (em cm)"
+            textFieldMedidaEmbaixoBusto.placeholder = "Medida embaixo do busto (em cm)"
+        case segmentedControlUnidadesMedidaÍndicePolegadas:
+            textFieldMedidaBusto.placeholder = "Medida do busto (em polegadas)"
+            textFieldMedidaEmbaixoBusto.placeholder = "Medida embaixo do busto (em polegadas)"
+        default:
+            break
+        }
+    }
 }
 

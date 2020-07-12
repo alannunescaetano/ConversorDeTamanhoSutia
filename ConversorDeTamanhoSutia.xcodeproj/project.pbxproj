@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7288A1324BB67320014625F /* ResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7288A1224BB67320014625F /* ResultadoViewController.swift */; };
 		C7859CA42428144100411B7C /* AbaConversoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7859CA32428144100411B7C /* AbaConversoesViewController.swift */; };
 		C7D171EA24070F8D00E84E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D171E924070F8D00E84E85 /* AppDelegate.swift */; };
 		C7D171EC24070F8D00E84E85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D171EB24070F8D00E84E85 /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7288A1224BB67320014625F /* ResultadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoViewController.swift; sourceTree = "<group>"; };
 		C7859CA32428144100411B7C /* AbaConversoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbaConversoesViewController.swift; sourceTree = "<group>"; };
 		C7D171E624070F8D00E84E85 /* ConversorDeTamanhoSutia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConversorDeTamanhoSutia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D171E924070F8D00E84E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				C7D171ED24070F8D00E84E85 /* AbaMedidasViewController.swift */,
 				C7859CA32428144100411B7C /* AbaConversoesViewController.swift */,
 				C7E74FA024291B7A00682392 /* SelecionarMedidaOrigemViewController.swift */,
+				C7288A1224BB67320014625F /* ResultadoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			files = (
 				C7E74FF1242C05DE00682392 /* MedidaCostasModel.swift in Sources */,
 				C7E74FF3242C060000682392 /* MedidaBojoModel.swift in Sources */,
+				C7288A1324BB67320014625F /* ResultadoViewController.swift in Sources */,
 				C7E74FE4242B9FDB00682392 /* ConversorUnidadesMedida.swift in Sources */,
 				C7E74FA124291B7A00682392 /* SelecionarMedidaOrigemViewController.swift in Sources */,
 				C7E74FEE242C045A00682392 /* MedidaBojoData.swift in Sources */,
