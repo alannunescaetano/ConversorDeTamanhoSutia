@@ -54,7 +54,7 @@ class ResultadoViewController: UITableViewController {
             cell.detailTextLabel?.text = String(conjuntoMedidas?.medidaUS ?? "")
         case (1,0):
             cell.textLabel?.text = "Converter outro tamanho"
-            cell.textLabel?.isUserInteractionEnabled = false
+            cell.textLabel?.isUserInteractionEnabled = true
             cell.textLabel?.textColor = .purple
             cell.detailTextLabel?.text = ""
             cell.accessoryType = .disclosureIndicator

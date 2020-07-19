@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JJu-Es-1Bv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JJu-Es-1Bv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-743" y="502"/>
         </scene>
-        <!--Conversões-->
+        <!--Padrão-->
         <scene sceneID="dwk-sV-iqu">
             <objects>
                 <viewController id="ABr-Qo-Zhz" customClass="AbaConversoesViewController" customModule="ConversorDeTamanhoSutia" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G44-lg-GvH" userLabel="tableViewMedidas">
-                                <rect key="frame" x="0.0" y="188" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="225.5" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="669" id="fVp-Tl-8iZ"/>
@@ -61,9 +61,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medida de origem:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-MZ-J26" userLabel="labelMedidaDeOrigem">
-                                <rect key="frame" x="20" y="159" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A partir de qual padrão de medida você quer converter?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-MZ-J26" userLabel="labelMedidaDeOrigem">
+                                <rect key="frame" x="20" y="138" width="374" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -71,16 +71,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="G44-lg-GvH" firstAttribute="leading" secondItem="9Vq-D5-dUG" secondAttribute="leading" id="HLq-ht-l7r"/>
-                            <constraint firstItem="4zz-MZ-J26" firstAttribute="top" secondItem="9Vq-D5-dUG" secondAttribute="top" constant="71" id="Saa-L8-7LX"/>
+                            <constraint firstItem="4zz-MZ-J26" firstAttribute="top" secondItem="9Vq-D5-dUG" secondAttribute="top" constant="50" id="Saa-L8-7LX"/>
                             <constraint firstItem="9Vq-D5-dUG" firstAttribute="trailing" secondItem="4zz-MZ-J26" secondAttribute="trailing" constant="20" id="Yo3-Bj-x6d"/>
-                            <constraint firstItem="G44-lg-GvH" firstAttribute="top" secondItem="4zz-MZ-J26" secondAttribute="bottom" constant="8" id="hM3-mB-vrt"/>
+                            <constraint firstItem="G44-lg-GvH" firstAttribute="top" secondItem="4zz-MZ-J26" secondAttribute="bottom" constant="30" id="hM3-mB-vrt"/>
                             <constraint firstItem="4zz-MZ-J26" firstAttribute="leading" secondItem="9Vq-D5-dUG" secondAttribute="leading" constant="20" id="nHx-wB-3lf"/>
                             <constraint firstItem="9Vq-D5-dUG" firstAttribute="trailing" secondItem="G44-lg-GvH" secondAttribute="trailing" id="wFA-oQ-BmB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Vq-D5-dUG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Conversões" image="arrow.right.arrow.left" catalog="system" id="sYQ-Ax-jYJ" userLabel="tabItemConversao"/>
-                    <navigationItem key="navigationItem" id="Axl-OK-5TQ"/>
+                    <navigationItem key="navigationItem" title="Padrão" id="Axl-OK-5TQ"/>
                     <connections>
                         <outlet property="tableViewHeight" destination="fVp-Tl-8iZ" id="RuT-ks-aSn"/>
                         <outlet property="tableViewMedidasOrigem" destination="G44-lg-GvH" id="91r-Xq-ZA3"/>
@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="788" y="-197"/>
         </scene>
-        <!--Selecionar Medida Origem View Controller-->
+        <!--Medida-->
         <scene sceneID="dWt-Uj-0e4">
             <objects>
                 <viewController id="HZM-WK-16u" customClass="SelecionarMedidaOrigemViewController" customModule="ConversorDeTamanhoSutia" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,28 +143,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual o número na etiqueta para:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edt-8v-8KT" userLabel="labelNumeroNaEtiqueta">
-                                <rect key="frame" x="20" y="128" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual o número na etiqueta para" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edt-8v-8KT" userLabel="labelNumeroNaEtiqueta">
+                                <rect key="frame" x="20" y="138" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="US / UK" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z6C-EQ-d54" userLabel="textViewOrigemSelecionada">
-                                <rect key="frame" x="20" y="169" width="374" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Cqy-Eo-luE"/>
-                                </constraints>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-D5-Upr" userLabel="pickerNumeracao">
-                                <rect key="frame" x="0.0" y="310" width="414" height="216"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSE-8k-slZ" userLabel="buttonConverter">
-                                <rect key="frame" x="134" y="725" width="146" height="30"/>
+                                <rect key="frame" x="134" y="723" width="146" height="30"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Converter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,34 +159,34 @@
                                     <segue destination="3gD-mT-q7J" kind="presentation" identifier="segueResulado" id="7J9-Xz-Gri"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhW-D5-Upr" userLabel="pickerNumeracao">
+                                <rect key="frame" x="0.0" y="197" width="414" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lBW-lz-CKg" firstAttribute="trailing" secondItem="edt-8v-8KT" secondAttribute="trailing" constant="20" id="1iE-tG-gTz"/>
                             <constraint firstItem="edt-8v-8KT" firstAttribute="leading" secondItem="lBW-lz-CKg" secondAttribute="leading" constant="20" id="5XF-SI-TgA"/>
                             <constraint firstItem="MSE-8k-slZ" firstAttribute="leading" secondItem="lBW-lz-CKg" secondAttribute="leading" constant="134" id="9uf-Zz-KDx"/>
-                            <constraint firstItem="lBW-lz-CKg" firstAttribute="bottom" secondItem="MSE-8k-slZ" secondAttribute="bottom" constant="58" id="AgW-r1-P4J"/>
-                            <constraint firstItem="Z6C-EQ-d54" firstAttribute="top" secondItem="edt-8v-8KT" secondAttribute="bottom" constant="20" id="FnQ-MF-SxM"/>
-                            <constraint firstItem="UhW-D5-Upr" firstAttribute="top" secondItem="Z6C-EQ-d54" secondAttribute="bottom" constant="101" id="MNu-Ae-dBV"/>
+                            <constraint firstItem="lBW-lz-CKg" firstAttribute="bottom" secondItem="MSE-8k-slZ" secondAttribute="bottom" constant="60" id="AgW-r1-P4J"/>
                             <constraint firstItem="lBW-lz-CKg" firstAttribute="trailing" secondItem="MSE-8k-slZ" secondAttribute="trailing" constant="134" id="XRd-hi-ig5"/>
-                            <constraint firstItem="Z6C-EQ-d54" firstAttribute="leading" secondItem="lBW-lz-CKg" secondAttribute="leading" constant="20" id="YoC-lh-DoA"/>
                             <constraint firstItem="lBW-lz-CKg" firstAttribute="trailing" secondItem="UhW-D5-Upr" secondAttribute="trailing" id="j99-Tk-mKE"/>
-                            <constraint firstItem="edt-8v-8KT" firstAttribute="top" secondItem="lBW-lz-CKg" secondAttribute="top" constant="40" id="lfN-2v-r1M"/>
-                            <constraint firstItem="lBW-lz-CKg" firstAttribute="trailing" secondItem="Z6C-EQ-d54" secondAttribute="trailing" constant="20" id="mRd-Tk-ZDn"/>
+                            <constraint firstItem="edt-8v-8KT" firstAttribute="top" secondItem="lBW-lz-CKg" secondAttribute="top" constant="50" id="lfN-2v-r1M"/>
                             <constraint firstItem="UhW-D5-Upr" firstAttribute="leading" secondItem="lBW-lz-CKg" secondAttribute="leading" id="uXD-IK-j9u"/>
+                            <constraint firstItem="UhW-D5-Upr" firstAttribute="top" secondItem="edt-8v-8KT" secondAttribute="bottom" constant="30" id="vae-UT-Niq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lBW-lz-CKg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vWq-hl-A3N"/>
+                    <navigationItem key="navigationItem" title="Medida" id="vWq-hl-A3N"/>
                     <connections>
                         <outlet property="buttonConverter" destination="MSE-8k-slZ" id="o5X-x4-OTJ"/>
+                        <outlet property="labelNumeroNaEtiquetaPara" destination="edt-8v-8KT" id="zcP-Ou-110"/>
                         <outlet property="pickerViewMedida" destination="UhW-D5-Upr" id="Oeg-vd-WYR"/>
-                        <outlet property="textViewPadraoMedida" destination="Z6C-EQ-d54" id="3VM-W0-51V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQ2-Io-k2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="502"/>
+            <point key="canvasLocation" x="841" y="502"/>
         </scene>
         <!--Medidas-->
         <scene sceneID="nHE-Px-l0P">
@@ -211,20 +197,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explicação sobre os campos de medidas corporais" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biA-bc-xOa" userLabel="labelExplicacaoMedidasCorporais">
-                                <rect key="frame" x="20" y="94" width="374" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="94" width="374" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qzA-Ir-AaJ" userLabel="imageViewExplicacaoMedidasCorporais">
-                                <rect key="frame" x="20" y="165" width="374" height="157"/>
+                                <rect key="frame" x="20" y="181.5" width="374" height="157"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="157" id="PX8-Uy-GQr"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medida do busto (em cm)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EGb-ft-jdJ" userLabel="textFieldMedidaBusto">
-                                <rect key="frame" x="20" y="432" width="374" height="34"/>
+                                <rect key="frame" x="20" y="459.5" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="XUn-B7-0sp"/>
                                 </constraints>
@@ -232,7 +218,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-cr-t1x" userLabel="buttonConverter">
-                                <rect key="frame" x="134" y="737" width="147" height="30"/>
+                                <rect key="frame" x="134" y="723" width="147" height="30"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Converter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,7 +228,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medida embaixo do busto (em cm)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QV5-gY-vD6" userLabel="textFieldMedidaEmbaixo">
-                                <rect key="frame" x="20" y="497" width="374" height="34"/>
+                                <rect key="frame" x="20" y="523.5" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="9R4-FE-EGZ"/>
                                 </constraints>
@@ -250,7 +236,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ebG-x3-UHl" userLabel="segmentedControlUnidadesMedida">
-                                <rect key="frame" x="81.5" y="368" width="251" height="32"/>
+                                <rect key="frame" x="81.5" y="398.5" width="251" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="9h6-pI-pa6"/>
                                     <constraint firstAttribute="width" constant="251" id="FVe-LD-TL6"/>
@@ -269,17 +255,17 @@
                             <constraint firstItem="bqB-I2-O4T" firstAttribute="trailing" secondItem="qzA-Ir-AaJ" secondAttribute="trailing" constant="20" id="7cf-Qq-UhI"/>
                             <constraint firstItem="qzA-Ir-AaJ" firstAttribute="leading" secondItem="bqB-I2-O4T" secondAttribute="leading" constant="20" id="EPM-gG-2Bk"/>
                             <constraint firstItem="bqB-I2-O4T" firstAttribute="trailing" secondItem="f0C-cr-t1x" secondAttribute="trailing" constant="133" id="Ehq-Tn-J76"/>
-                            <constraint firstItem="EGb-ft-jdJ" firstAttribute="top" secondItem="ebG-x3-UHl" secondAttribute="bottom" constant="33" id="Mbz-bM-1G6"/>
+                            <constraint firstItem="EGb-ft-jdJ" firstAttribute="top" secondItem="ebG-x3-UHl" secondAttribute="bottom" constant="30" id="Mbz-bM-1G6"/>
                             <constraint firstItem="qzA-Ir-AaJ" firstAttribute="top" secondItem="biA-bc-xOa" secondAttribute="bottom" constant="30" id="Ph7-sN-GVg"/>
-                            <constraint firstItem="QV5-gY-vD6" firstAttribute="top" secondItem="EGb-ft-jdJ" secondAttribute="bottom" constant="31" id="Rjp-i2-Qpm"/>
+                            <constraint firstItem="QV5-gY-vD6" firstAttribute="top" secondItem="EGb-ft-jdJ" secondAttribute="bottom" constant="30" id="Rjp-i2-Qpm"/>
                             <constraint firstItem="bqB-I2-O4T" firstAttribute="trailing" secondItem="EGb-ft-jdJ" secondAttribute="trailing" constant="20" id="TaB-Sh-uc0"/>
                             <constraint firstItem="f0C-cr-t1x" firstAttribute="leading" secondItem="bqB-I2-O4T" secondAttribute="leading" constant="134" id="VE4-yo-I7e"/>
                             <constraint firstItem="ebG-x3-UHl" firstAttribute="centerX" secondItem="bqB-I2-O4T" secondAttribute="centerX" id="XMH-uv-Ecd"/>
-                            <constraint firstItem="ebG-x3-UHl" firstAttribute="top" secondItem="qzA-Ir-AaJ" secondAttribute="bottom" constant="46" id="cSi-RD-73o"/>
+                            <constraint firstItem="ebG-x3-UHl" firstAttribute="top" secondItem="qzA-Ir-AaJ" secondAttribute="bottom" constant="60" id="cSi-RD-73o"/>
                             <constraint firstItem="biA-bc-xOa" firstAttribute="top" secondItem="bqB-I2-O4T" secondAttribute="top" constant="50" id="ev6-6W-wfy"/>
                             <constraint firstItem="biA-bc-xOa" firstAttribute="leading" secondItem="bqB-I2-O4T" secondAttribute="leading" constant="20" id="g2a-Gy-p8T"/>
                             <constraint firstItem="bqB-I2-O4T" firstAttribute="trailing" secondItem="biA-bc-xOa" secondAttribute="trailing" constant="20" id="gFX-YB-yI5"/>
-                            <constraint firstItem="bqB-I2-O4T" firstAttribute="bottom" secondItem="f0C-cr-t1x" secondAttribute="bottom" constant="46" id="iXz-Vr-Nhb"/>
+                            <constraint firstItem="bqB-I2-O4T" firstAttribute="bottom" secondItem="f0C-cr-t1x" secondAttribute="bottom" constant="60" id="iXz-Vr-Nhb"/>
                             <constraint firstItem="bqB-I2-O4T" firstAttribute="trailing" secondItem="QV5-gY-vD6" secondAttribute="trailing" constant="20" id="vr0-mT-ZIz"/>
                             <constraint firstItem="QV5-gY-vD6" firstAttribute="leading" secondItem="bqB-I2-O4T" secondAttribute="leading" constant="20" id="w6x-ny-cqd"/>
                             <constraint firstItem="EGb-ft-jdJ" firstAttribute="leading" secondItem="bqB-I2-O4T" secondAttribute="leading" constant="20" id="wmd-gy-0Sr"/>
@@ -317,11 +303,11 @@
             <point key="canvasLocation" x="-1542" y="171"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="arrow.right.arrow.left" catalog="system" width="58" height="64"/>
-        <image name="pin" catalog="system" width="58" height="64"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FEj-x3-0wC"/>
+        <segue reference="7J9-Xz-Gri"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrow.right.arrow.left" catalog="system" width="119" height="128"/>
+        <image name="pin" catalog="system" width="119" height="128"/>
+    </resources>
 </document>

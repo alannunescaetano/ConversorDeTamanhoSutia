@@ -35,6 +35,7 @@ class AbaConversoesViewController: UIViewController, UITableViewDelegate, UITabl
         
         tableViewHeight.constant = CGFloat(50 * origens.count)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        tabBarController?.tabBar.isHidden = false
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

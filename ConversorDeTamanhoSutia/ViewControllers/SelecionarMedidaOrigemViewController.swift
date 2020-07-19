@@ -26,20 +26,21 @@ class SelecionarMedidaOrigemViewController: UIViewController, UIPickerViewDelega
     
     @IBOutlet weak var buttonConverter: UIButton!
     @IBOutlet weak var pickerViewMedida: UIPickerView!
-    @IBOutlet weak var textViewPadraoMedida: UITextView!
+    @IBOutlet weak var labelNumeroNaEtiquetaPara: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         buttonConverter.layer.cornerRadius = 10
         buttonConverter.clipsToBounds = true
         navigationController?.setNavigationBarHidden(false, animated: false)
+        labelNumeroNaEtiquetaPara.text = "Qual o número na etiqueta para \(padraoDeMedidaSelecionado?.descricao ?? "")?"
+        tabBarController?.tabBar.isHidden = true
+        
+        carregarMedidas()
+        setPickerView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textViewPadraoMedida.text = padraoDeMedidaSelecionado?.descricao
-        carregarMedidas()
-        setPickerView()
     }
     
     // MARK:  UIPickerView
