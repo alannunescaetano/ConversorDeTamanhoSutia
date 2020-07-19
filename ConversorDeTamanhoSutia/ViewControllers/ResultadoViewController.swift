@@ -19,17 +19,25 @@ class ResultadoViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        tableView.reloadData()
     }
     
     private func setup() {
+        tableView.allowsSelection = false
+        tableView.dragInteractionEnabled = false
+        tableView.isScrollEnabled = false
         
+        let footerView = UIView()
+        footerView.backgroundColor = .systemGroupedBackground
+        tableView.tableFooterView = footerView
     }
     
     //MARK: UITableViewController overrides
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: resultadoCellReuseIdentifier, for: indexPath)
+        cell.isUserInteractionEnabled = false
+        cell.textLabel?.text = ""
+        cell.detailTextLabel?.text = ""
         
         switch(indexPath.section, indexPath.row) {
         case (0,0):
@@ -44,6 +52,12 @@ class ResultadoViewController: UITableViewController {
         case (0,3):
             cell.textLabel?.text = "US"
             cell.detailTextLabel?.text = String(conjuntoMedidas?.medidaUS ?? "")
+        case (1,0):
+            cell.textLabel?.text = "Converter outro tamanho"
+            cell.textLabel?.isUserInteractionEnabled = false
+            cell.textLabel?.textColor = .purple
+            cell.detailTextLabel?.text = ""
+            cell.accessoryType = .disclosureIndicator
         default:
             break
         }
@@ -52,10 +66,47 @@ class ResultadoViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        switch section {
+        case 0:
+            return 4
+        case 1:
+            return 1
+        default:
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 60
+        case 1:
+            return 100
+        default:
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Medidas ..."
+        default:
+            return ""
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
