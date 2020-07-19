@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7283C7124C448740011FA88 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7283C7024C448740011FA88 /* Alerta.swift */; };
 		C7288A1324BB67320014625F /* ResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7288A1224BB67320014625F /* ResultadoViewController.swift */; };
 		C7859CA42428144100411B7C /* AbaConversoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7859CA32428144100411B7C /* AbaConversoesViewController.swift */; };
 		C7D171EA24070F8D00E84E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D171E924070F8D00E84E85 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7283C7024C448740011FA88 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		C7288A1224BB67320014625F /* ResultadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoViewController.swift; sourceTree = "<group>"; };
 		C7859CA32428144100411B7C /* AbaConversoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbaConversoesViewController.swift; sourceTree = "<group>"; };
 		C7D171E624070F8D00E84E85 /* ConversorDeTamanhoSutia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConversorDeTamanhoSutia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 			children = (
 				C7E74FE3242B9FDB00682392 /* ConversorUnidadesMedida.swift */,
 				C7E74FE6242BAA1700682392 /* ConversorMedidasSutia.swift */,
+				C7283C7024C448740011FA88 /* Alerta.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				C7859CA42428144100411B7C /* AbaConversoesViewController.swift in Sources */,
 				C7E74FE7242BAA1700682392 /* ConversorMedidasSutia.swift in Sources */,
 				C7E74FA424296BDD00682392 /* PadraoMedida.swift in Sources */,
+				C7283C7124C448740011FA88 /* Alerta.swift in Sources */,
 				C7E74FE9242BB0EC00682392 /* ConjuntoMedidas.swift in Sources */,
 				C7E74FEC242C042B00682392 /* MedidaCostasData.swift in Sources */,
 				C7D171EC24070F8D00E84E85 /* SceneDelegate.swift in Sources */,

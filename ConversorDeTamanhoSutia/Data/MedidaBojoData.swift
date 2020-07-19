@@ -34,10 +34,10 @@ class MedidaBojoData {
     }
     
     func GetByTamanho(tamanhoEmCm:Int) -> MedidaBojoModel? {
-        let filtrados = _medidasBojo.filter { $0.tamanhoInicial! < tamanhoEmCm && $0.tamanhoFinal! > tamanhoEmCm }
+        let filtrados = _medidasBojo.filter { $0.tamanhoInicial! <= tamanhoEmCm && $0.tamanhoFinal! >= tamanhoEmCm }
         if(filtrados.count > 0) {
             return filtrados[0]
-        }else{
+        } else {
             return nil
         }
     }

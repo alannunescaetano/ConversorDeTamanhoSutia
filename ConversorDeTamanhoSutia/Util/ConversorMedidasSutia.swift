@@ -41,7 +41,7 @@ class ConversorMedidasSutia {
         let medidaEmbaixoDoBustoEmIn = ConversorUnidadesMedida.converterCmParaPolegadas(cm: tamanhoEmbaixoDoBusto)
         
         let medidaCostasTamanho = medidaCostasData.GetByTamanho(tamanhoEmCm: tamanhoEmbaixoDoBusto)
-        let medidaBojoTamanho = medidaBojoData.GetByTamanho(tamanhoEmCm: tamanhoBusto)
+        let medidaBojoTamanho = medidaBojoData.GetByTamanho(tamanhoEmCm: tamanhoBusto - tamanhoEmbaixoDoBusto)
         
         let conjuntoMedidas = criarConjuntoDeMedidas(medidaBustoEmCm: medidaBustoEmCm, medidaBustoEmIn: medidaBustoEmIn, medidaEmbaixoDoBustoEmCm: medidaEmbaixoDoBustoEmCm, medidaEmbaixoDoBustoEmIn: medidaEmbaixoDoBustoEmIn, medidaCostasTamanho: medidaCostasTamanho, medidaBojoTamanho:medidaBojoTamanho)
         

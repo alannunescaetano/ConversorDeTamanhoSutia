@@ -31,6 +31,7 @@ class SelecionarMedidaOrigemViewController: UIViewController, UIPickerViewDelega
     override func viewWillAppear(_ animated: Bool) {
         buttonConverter.layer.cornerRadius = 10
         buttonConverter.clipsToBounds = true
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidLoad() {
@@ -128,7 +129,7 @@ class SelecionarMedidaOrigemViewController: UIViewController, UIPickerViewDelega
             case padraoUK:
                 _medidasBojo.append(medida.medidaUK ?? "")
                 break
-            case padraoEU:
+            case padraoUS:
                 _medidasBojo.append(medida.medidaUS ?? "")
                 break
             default:
